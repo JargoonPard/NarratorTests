@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="menu.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            console.log("window onload called");
+            document.getElementById("addNewMenuItemBtn").addEventListener("click", function () { AddMenuItem('Next') });
+        };
+    </script>
+</head>
+
+<body>
+    <div title="title1" role="tablist">
+        <div title="A" role="tab" tabindex="1">A</div>
+        <div role="tab" tabindex="2">B</div>
+        <div role="tab" tabindex="3">C</div>
+        <div title="D" role="tab" tabindex="4">D</div>
+    </div>
+
+    <input type="text" aria-label="Big Box">
+
+    <ul id="theMenu" role="menu">
+        <li role="menuitem" aria-label="One">One</li>
+        <li role="menuitem" aria-label="Two">Two</li>
+        <li role="menuitem" aria-label="Three">Three</li>
+    </ul>
+
+    <div>
+        <label>New Menu Entry:</label>
+        <input type="text" id="newMenuValu">
+        <!-- <button id="addNewMenuItemBtn" value="Add Menu Item" onclick="AddMenuItem('Next')">Add Menu Item </button> -->
+        <button id="addNewMenuItemBtn" value="Add Menu Item">Add Menu Item </button>
+    </div>
+    <br>
+    <div class="BPT-Toolbar selectNone" role="toolbar">
+        <div class="BPT-ToolbarContents selectNone">
+            <div class="BPT-SearchBox-Border selectNone" id="searchBoxBorder" data-control="Common.Controls.SearchControl" data-name="_searchControl">
+                <input tabindex="0" class="BPT-SearchBox selectElement" id="searchbox" role="search" aria-label="Find... (Ctrl+F)" type="text"
+                    placeholder="Find (Ctrl+F)" data-plugin-vs-tooltip="Find (Ctrl+F)" data-name="_textBoxRoot">
+                <div tabindex="0" class="BPT-Search-Button selectNone BPT-hidden" id="searchPreviousResult" role="button" aria-label="Find previous (Shift+F3)"
+                    data-plugin-vs-tooltip="Find previous (Shift+F3)" data-name="searchPreviousResult">
+                    <div class="BPT-Search-Previous selectNone"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
