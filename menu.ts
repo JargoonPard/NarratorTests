@@ -1,3 +1,5 @@
+var counter: number = 0;
+
 function createNewMenuEntryNew(menuValue: string): HTMLLIElement {
     let newEntry = document.createElement<"li">("li");
 
@@ -32,6 +34,7 @@ function createNewMenuEntryThree(menuValue: string): HTMLLIElement {
 
 function AddMenuItem(entryName: string): void {
     let newEntry = createNewMenuEntry(entryName);
+    counter++;
 
     const menu = document.getElementById(`theMenu`);
     menu.appendChild(newEntry);

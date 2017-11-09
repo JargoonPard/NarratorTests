@@ -1,3 +1,4 @@
+var counter = 0;
 function createNewMenuEntryNew(menuValue) {
     let newEntry = document.createElement("li");
     let roleAttr = document.createAttribute("role");
@@ -22,6 +23,7 @@ function createNewMenuEntryThree(menuValue) {
 }
 function AddMenuItem(entryName) {
     let newEntry = createNewMenuEntry(entryName);
+    counter++;
     const menu = document.getElementById(`theMenu`);
     menu.appendChild(newEntry);
 }
