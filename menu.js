@@ -1,38 +1,38 @@
 var counter = 0;
 function createNewMenuEntryNew(menuValue) {
-    let newEntry = document.createElement("li");
-    let roleAttr = document.createAttribute("role");
+    var newEntry = document.createElement("li");
+    var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
     newEntry.attributes.setNamedItem(roleAttr);
-    let ariaAttr = document.createAttribute("aria-label");
+    var ariaAttr = document.createAttribute("aria-label");
     ariaAttr.value = menuValue;
     newEntry.attributes.setNamedItem(ariaAttr);
     newEntry.innerText = menuValue;
     return newEntry;
 }
 function createNewMenuEntryThree(menuValue) {
-    let newEntry = document.createElement("li");
-    let roleAttr = document.createAttribute("role");
+    var newEntry = document.createElement("li");
+    var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
     newEntry.attributes.setNamedItem(roleAttr);
-    let ariaAttr = document.createAttribute("aria-label");
+    var ariaAttr = document.createAttribute("aria-label");
     ariaAttr.value = menuValue;
     newEntry.attributes.setNamedItem(ariaAttr);
     newEntry.innerText = menuValue;
     return newEntry;
 }
 function AddMenuItem(entryName) {
-    let newEntry = createNewMenuEntry(entryName);
+    var newEntry = createNewMenuEntry(entryName);
     counter++;
-    const menu = document.getElementById(`theMenu`);
+    var menu = document.getElementById("theMenu");
     menu.appendChild(newEntry);
 }
 function createNewMenuEntry(menuValue) {
-    let newEntry = document.createElement("li");
-    let roleAttr = document.createAttribute("role");
+    var newEntry = document.createElement("li");
+    var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
     newEntry.attributes.setNamedItem(roleAttr);
-    let ariaAttr = document.createAttribute("aria-label");
+    var ariaAttr = document.createAttribute("aria-label");
     ariaAttr.value = menuValue;
     newEntry.attributes.setNamedItem(ariaAttr);
     newEntry.innerText = menuValue;
