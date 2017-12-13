@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+(() =>
+{
+var nodeIterator = document.createNodeIterator( 
+                    document.body,
+                    NodeFilter.SHOW_ELEMENT,
+                    { acceptNode: function(node){ return NodeFilter.FILTER_ACCEPT; } },
+                    false
+                );
+				debugger;
+console.log(nodeIterator.referenceNode);
+})();
+</script>
+</body>
+</html>
