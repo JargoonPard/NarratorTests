@@ -1,5 +1,7 @@
 var counter = 0;
+var x = 100;
 function createNewMenuEntryNew(menuValue) {
+    x++;
     var newEntry = document.createElement("li");
     var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
@@ -11,6 +13,7 @@ function createNewMenuEntryNew(menuValue) {
     return newEntry;
 }
 function createNewMenuEntryThree(menuValue) {
+    x++;
     var newEntry = document.createElement("li");
     var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
@@ -22,12 +25,14 @@ function createNewMenuEntryThree(menuValue) {
     return newEntry;
 }
 function AddMenuItem(entryName) {
+    x--;
     var newEntry = createNewMenuEntry(entryName);
     counter++;
     var menu = document.getElementById("theMenu");
     menu.appendChild(newEntry);
 }
 function createNewMenuEntry(menuValue) {
+    x--;
     var newEntry = document.createElement("li");
     var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
@@ -38,4 +43,3 @@ function createNewMenuEntry(menuValue) {
     newEntry.innerText = menuValue;
     return newEntry;
 }
-//# sourceMappingURL=menu.js.map

@@ -1,6 +1,11 @@
+// To transpile into JS in VS Code open a terminal window (if one isn't available already: Ctrl+`)
+// enter the following command: rsc menu.js
+// That should be it.  The menu.js file should be updated to match the current typescript file.
 var counter: number = 0;
+var x: number = 100;
 
 function createNewMenuEntryNew(menuValue: string): HTMLLIElement {
+    x++;
     let newEntry = document.createElement<"li">("li");
 
     let roleAttr = document.createAttribute("role");
@@ -17,6 +22,7 @@ function createNewMenuEntryNew(menuValue: string): HTMLLIElement {
 }
 
 function createNewMenuEntryThree(menuValue: string): HTMLLIElement {
+    x++;
     let newEntry = document.createElement<"li">("li");
 
     let roleAttr = document.createAttribute("role");
@@ -33,6 +39,7 @@ function createNewMenuEntryThree(menuValue: string): HTMLLIElement {
 }
 
 function AddMenuItem(entryName: string): void {
+    x--;
     let newEntry = createNewMenuEntry(entryName);
     counter++;
 
@@ -41,6 +48,7 @@ function AddMenuItem(entryName: string): void {
 }
 
 function createNewMenuEntry(menuValue: string): HTMLLIElement {
+    x--;
     let newEntry = document.createElement<"li">("li");
 
     let roleAttr = document.createAttribute("role");
