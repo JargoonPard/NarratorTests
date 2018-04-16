@@ -30,6 +30,7 @@ function AddMenuItem(entryName) {
     counter++;
     var menu = document.getElementById("theMenu");
     menu.appendChild(newEntry);
+    console.log("AddMenuItem called with " + entryName);
 }
 function createNewMenuEntry(menuValue) {
     x--;
