@@ -1,5 +1,5 @@
 // To transpile into JS in VS Code open a terminal window (if one isn't available already: Ctrl+`)
-// enter the following command: rsc menu.js
+// enter the following command: tsc menu.ts
 // That should be it.  The menu.js file should be updated to match the current typescript file.
 var counter: number = 0;
 var x: number = 100;
