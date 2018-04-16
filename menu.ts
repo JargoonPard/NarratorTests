@@ -45,6 +45,7 @@ function AddMenuItem(entryName: string): void {
 
     const menu = document.getElementById(`theMenu`);
     menu.appendChild(newEntry);
+    console.log("AddMenuItem called with " + entryName);
 }
 
 function createNewMenuEntry(menuValue: string): HTMLLIElement {
