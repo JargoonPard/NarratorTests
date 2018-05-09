@@ -1,5 +1,5 @@
 // to transpile into JS in VS Code open a terminal window (if one isn't available already: Ctrl+`)
-// enter the following command: tsc menu.ts
+// enter the following command: tsc menu.ts --sourceMap
 // that should be it.  The menu.js file should be updated to match the current typescript file.
 var counter: number = 0;
 var x: number = 100;
@@ -25,6 +25,10 @@ function createNewMenuEntryNew(menuValue: string): HTMLLIElement {
 function createNewMenuEntryThree(menuValue: string): HTMLLIElement {
     x++;
     console.warn(`x is ${x}`);
+    if (x > 4) {
+        throw ("Time to blow up!");
+    }
+
     let newEntry:HTMLLIElement = document.createElement<"li">("li");
 
     let roleAttr:Attr = document.createAttribute("role");

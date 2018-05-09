@@ -1,5 +1,5 @@
 // to transpile into JS in VS Code open a terminal window (if one isn't available already: Ctrl+`)
-// enter the following command: tsc menu.ts
+// enter the following command: tsc menu.ts --sourceMap
 // that should be it.  The menu.js file should be updated to match the current typescript file.
 var counter = 0;
 var x = 100;
@@ -13,12 +13,15 @@ function createNewMenuEntryNew(menuValue) {
     ariaAttr.value = menuValue;
     newEntry.attributes.setNamedItem(ariaAttr);
     newEntry.innerText = menuValue;
-    console.log("createNewMenuEntryNew line 20");
+    console.error("createNewMenuEntryNew line 20");
     return newEntry;
 }
 function createNewMenuEntryThree(menuValue) {
     x++;
-    console.log("x is " + x);
+    console.warn("x is " + x);
+    if (x > 4) {
+        throw ("Time to blow up!");
+    }
     var newEntry = document.createElement("li");
     var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
@@ -51,3 +54,4 @@ function createNewMenuEntry(menuValue) {
     newEntry.innerText = menuValue;
     return newEntry;
 }
+//# sourceMappingURL=menu.js.map
