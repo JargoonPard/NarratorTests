@@ -17,12 +17,14 @@ function createNewMenuEntryNew(menuValue: string): HTMLLIElement {
     newEntry.attributes.setNamedItem(ariaAttr);
 
     newEntry.innerText = menuValue;
+    console.error("createNewMenuEntryNew line 20");
 
     return newEntry;
 }
 
 function createNewMenuEntryThree(menuValue: string): HTMLLIElement {
     x++;
+    console.warn(`x is ${x}`);
     let newEntry:HTMLLIElement = document.createElement<"li">("li");
 
     let roleAttr:Attr = document.createAttribute("role");
@@ -42,6 +44,7 @@ function AddMenuItem(entryName: string): void {
     x--;
     let newEntry:HTMLLIElement = createNewMenuEntry(entryName);
     counter++;
+    console.log(`counter is ${counter}`);
 
     const menu:HTMLElement = document.getElementById(`theMenu`);
     menu.appendChild(newEntry);
@@ -49,6 +52,7 @@ function AddMenuItem(entryName: string): void {
 }
 
 function createNewMenuEntry(menuValue: string): HTMLLIElement {
+    console.log("Let's create a new Menu Entry!");
     x--;
     let newEntry:HTMLLIElement = document.createElement<"li">("li");
 

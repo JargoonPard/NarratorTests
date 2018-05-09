@@ -13,10 +13,12 @@ function createNewMenuEntryNew(menuValue) {
     ariaAttr.value = menuValue;
     newEntry.attributes.setNamedItem(ariaAttr);
     newEntry.innerText = menuValue;
+    console.log("createNewMenuEntryNew line 20");
     return newEntry;
 }
 function createNewMenuEntryThree(menuValue) {
     x++;
+    console.log("x is " + x);
     var newEntry = document.createElement("li");
     var roleAttr = document.createAttribute("role");
     roleAttr.value = "menuitem";
@@ -31,11 +33,13 @@ function AddMenuItem(entryName) {
     x--;
     var newEntry = createNewMenuEntry(entryName);
     counter++;
+    console.log("counter is " + counter);
     var menu = document.getElementById("theMenu");
     menu.appendChild(newEntry);
     console.log("AddMenuItem called with " + entryName);
 }
 function createNewMenuEntry(menuValue) {
+    console.log("Let's create a new Menu Entry!");
     x--;
     var newEntry = document.createElement("li");
     var roleAttr = document.createAttribute("role");
